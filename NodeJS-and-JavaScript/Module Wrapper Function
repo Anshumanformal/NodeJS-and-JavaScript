@@ -1,0 +1,26 @@
+//Module Wrapper function in NodeJS.
+(
+function(exports,require, module, __filename, __dirname){
+    const myname = "Hello World!";
+    console.log(myname);
+}
+)();
+
+/*
+NodeJS implicitely converts the code into a Module wrapper function.
+
+() - This is termed as grouping operator. Module wrapper 
+     anonymous function is written inside it.
+
+Syntax:
+
+function(exports, require, module, __filename, __dirname){
+    //code
+}();
+
+The last parenthesis is used to run code. If it's not added the code won't run.
+
+Note:
+1. All code written inside the grouping operator is private by default.
+2. Any piece of code written outside the grouping operator throws error.
+*/

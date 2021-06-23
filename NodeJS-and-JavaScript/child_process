@@ -1,0 +1,11 @@
+//To help to execute many tasks at a time node.js has module called node.js child process.
+
+//With the help of these processes we can release as many small processes as we require.
+
+//Node.js child process has one MAIN process.
+
+//Node.js process has some arguments.
+
+//It gives the project directory and the nodejs installation directory.
+
+console.log(process.argv)

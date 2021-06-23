@@ -1,0 +1,16 @@
+Difference between the usage of 'for/in' and 'for/of'.
+
+Both for..in and for..of are looping constructs which
+are used to iterate over data structures. The only
+difference between them is the entities they iterate
+over: for..in iterates over all enumerable property keys
+of an object. for..of iterates over the values of an iterable object.
+
+for in --> can be used to count the number of keys in an object.
+           Another way is also to use the method Object.keys(<objectname>).
+
+           link : https://www.programiz.com/javascript/examples/key-value-object#:~:text=keys()%20method%20and%20the,the%20length%20of%20the%20array.
+
+for of --> can be used to count the number of values in an object.
+
+@courtesy: stackoverflow.com, programiz.com

@@ -1,0 +1,12 @@
+How to convert object to JSON?
+
+Ans. Use JSON.stringify(<pass the object here>).
+This will do the work.
+
+How to convert JSON to object?
+Ans. Use JSON.parse(<pass the JSON here>).
+This will do the work.
+
+Difference between object and JSON?
+Ans. In object, only values have double quotes.
+Whereas in JSON, both property(i.e. key) and value have double quotes.

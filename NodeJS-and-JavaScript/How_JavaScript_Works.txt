@@ -1,0 +1,11 @@
+The JavaScript code goes through the Parser inside the JavaScript Engine.
+
+Note: Chrome's JavaScript Engine is called - V8 JavaScript engine(also used in NodeJS).
+      Mozilla's JavaScript Engine is called - Spidermonkey
+      
+The parser converts the code into AST(Abstract Syntax Tree) which is a tree like structure which denotes
+how the code is going to be executed.
+
+The AST converts the code into Machine code.
+Then this machine code is executed to produce output.
+      

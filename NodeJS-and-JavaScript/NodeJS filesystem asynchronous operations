@@ -1,0 +1,29 @@
+//Working with NodeJS files asynchronously.
+
+const fs = require('fs');
+
+//Creating a directory.
+fs.mkdir('readprog',(err)=>{
+    console.log(err);
+});
+
+//Writing to a file.
+fs.writeFile('readprog/read.txt','Hello World!',(err)=>{
+    console.log(err)
+});
+
+//Appending to a file.
+fs.appendFile('readprog/read.txt',' Sun rises in the east.',(err)=>{
+    console.log(err)
+});
+
+//Renaming a file.
+fs.rename('readprog/read.txt','readprog/readfile.txt',(err)=>{
+    console.log(err)
+});
+
+//Deleting a file.
+fs.unlink('readprog/readfile.txt',(err)=>{
+    console.log('\nThe required file is deleted successfully.');
+});
+

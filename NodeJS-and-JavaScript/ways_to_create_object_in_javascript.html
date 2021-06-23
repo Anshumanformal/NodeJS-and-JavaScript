@@ -1,0 +1,45 @@
+//Ways to create a javascript object.
+<html>
+    <head>
+        <title>
+            This is the title.
+        </title>
+    </head>
+<script>
+
+//Method 1: By simply defining the attributes.
+
+var object1 = {
+    //Defining the attributes.
+    id : 1221,
+    name : "WOW",
+    colour : "Red"
+}
+
+
+document.write(object1.id+" "+object1.name+" "+object1.colour+"\n\n");
+
+//Method 2: By using the new keyword.
+
+var obj2 = new Object();
+obj2.id = 21212;
+obj2.name = "Hello World";
+obj2.colour = "White";
+
+document.write(obj2.i+"\t"+obj2.name+"\t"+obj2.colour);
+
+
+//Method 3: By using the new keyword along with constructor.
+
+function objectCreation(name,id,colour){
+    this.name = name;
+    this.id = id;
+    this.colour = colour;
+}
+
+obj3 = new objectCreation("Ram",1214323,"orange");
+document.write("\t\t"+obj3.name+"\t\t"+obj3.id+"\t\t"+obj3.colour+"\t\t");
+
+
+</script>
+</html>

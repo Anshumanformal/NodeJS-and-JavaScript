@@ -1,0 +1,23 @@
+//Create a file called bio.txt.
+const fs = require('fs');
+
+//To create a directory using file system in NodeJS.
+fs.mkdirSync('MyProgram');
+
+//To write data to a file using file system in NodeJS.
+fs.writeFileSync('MyProgram/bio.txt','Hello World');
+
+//To append data to a file using file system in NodeJS.
+fs.appendFileSync('MyProgram/bio.txt',' How are you?');
+
+//To read data from a file using file system in NodeJS.
+fs.readFileSync('MyProgram/bio.txt','utf8');
+
+//To rename a file using file system in NodeJS.
+fs.renameSync('MyProgram/bio.txt','MyProgram/mybio.txt');
+
+//To delete a file using file system in NodeJS.
+fs.unlinkSync('MyProgram/mybio.txt');
+
+//To delete a directory using file system in NodeJS.
+fs.rmdirSync("MyProgram");
