@@ -1,3 +1,1 @@
-<<<<<<< HEAD
 # NodeJS-and-JavaScript
-=======
