@@ -1,0 +1,36 @@
+HTTP header fields:
+
+1. method
+2. path
+3. protocol
+4. HTTP headers as Name : Value pairs
+
+HTTP is stateless so we need to send some kind of token(like JWT) within the Authorization header, in order to access a protected page or route, unless we are
+using sessions on a server.
+
+HTTP status codes:
+
+1xx : Informational
+Request received / processing
+
+2xx : Success
+Successfully received, understood and accepted
+
+3xx : Redirect
+Further action must be taken / redirect
+
+4xx : Client Error
+Request does not have what it needs. Eg: lastName field is required, but the request didn't send it.
+
+5xx : Server Error
+Server failed to fulfil an apparent valid request
+
+Multiplexing(in HTTP/2):
+Here, after get request for index.html(i.e. the main page) is done, get request to styles.css and scripts.js is done at one go. They
+are received together at one shot too. This demonstrates multiplexing.
+
+
+One major difference between HTTP/1.1 and HTTP/2 is that:
+
+After any get, post or any method done in HTTP/1.1   --> connection gets closed.
+After any get, post or any method done in HTTP/2   --> connection remains open.
