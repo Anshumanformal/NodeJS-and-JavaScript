@@ -1,0 +1,56 @@
+// Without using bind
+
+let person = {
+    name: 'John Doe',
+    getName: function() {
+        console.log(this.name);
+    }
+};
+
+setTimeout(person.getName, 1000); // Output - undefined
+// Reason - setTimeout() received the function person.getName separately from the person object
+
+// Same condition as previous
+let f = person.getName;
+setTimeout(f, 1000); // lost person context
+
+
+// This following code works because it gets the person from the outer scope and then calls the method getName()
+setTimeout(function () {
+    person.getName();
+}, 1000);
+
+// Using bind for the same
+let f = person.getName.bind(person);
+setTimeout(f,1000);
+
+//Here,
+// First, bind the person.getName method to the person object.
+// Second, pass the bound function f with this value set to the person object to the setTimeout() function.
+
+//---------------------------------------------------------------------------------------------------------
+//Using bind() to borrow methods from a different object
+let runner = {
+    name: 'Runner',
+    run: function(speed) {
+        console.log(this.name + ' runs at ' + speed + ' mph.');
+    }
+};
+
+let flyer = {
+    name: 'Flyer',
+    fly: function(speed) {
+        console.log(this.name + ' flies at ' + speed + ' mph.');
+    }
+};
+
+// if we want the flyer object to be able to run, then we can bind the method to create the run() function with the this set to the flyer object
+let run = runner.run.bind(flyer,20);
+// Output - Flyer runs at 20 mph.
+
+Points:-
+
+1. The ability to borrow a method of an object without making a copy of that method and maintain it in two separate places(known as function borrowing) is very powerful in JavaScript.
+2. The bind() method creates a new function, when invoked, has the this sets to a provided value.
+
+@courtesy - https://www.javascripttutorial.net/javascript-bind/
