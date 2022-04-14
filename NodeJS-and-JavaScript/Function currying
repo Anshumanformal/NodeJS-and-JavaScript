@@ -1,0 +1,26 @@
+//When we use function currying, we don't have to pass all the arguments at once.
+// Instead, the parent function takes an argument and returns a new function, which takes the second argument and returns a new function
+ and so on until all arguments are completed.
+ 
+ Advantages:-
+ 1. It can be used to check whether all the arguments are received or not.
+ 2. It can help to avoid passing the same variables again and again.
+ 
+ // Non-curried function
+ 
+ const addFunc = (a,b,c) => {
+  return a + b + c;
+ }
+ 
+ console.log(addFunc(1,2,3));
+ // Curried function
+ 
+ const addFunc = (a) => {
+    return (b) => {
+        return (c) => {
+          return a + b + c;
+        }
+    }
+ }
+ 
+ console.log(addFunc(1)(2)(3));
