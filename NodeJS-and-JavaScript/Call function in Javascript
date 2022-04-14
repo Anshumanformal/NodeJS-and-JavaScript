@@ -1,0 +1,44 @@
+var greeting = 'Hi';
+
+var messenger = {
+    greeting: 'Hello'
+}
+
+function say(name) {
+    console.log(this.greeting + ' ' + name);
+}
+
+// Note that in the strict mode, the this inside the function is set to undefined instead of the global object.
+say.call(this,'John');   // Output - "Hi John" 
+// Output when use strict is used - undefined John
+
+say.call(messenger,'John');   // Output - "Hello John"
+
+
+//--------------------------------------------------------------------------------------------------------------------------------------------
+//Using the JavaScript call() method for function borrowing
+
+const car = {
+  name: 'car',
+  start() {
+    console.log('Start the ' + this.name);
+  },
+  speedUp() {
+    console.log('Speed up the ' + this.name);
+  },
+  stop() {
+    console.log('Stop the ' + this.name);
+  },
+};
+
+const aircraft = {
+  name: 'aircraft',
+  fly() {
+    console.log('Fly the ' + this.name);
+  },
+};
+
+console.log(car.start.call(aircraft));
+console.log(car.speedUp.call(aircraft));
+console.log(aircraft.fly.call(car));
+
